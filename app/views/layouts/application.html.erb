@@ -8,14 +8,16 @@
   <%= csrf_meta_tags %>
 </head>
 <body class="container">
-	<div class="page-header" style="background-image: url(http://media.moddb.com/images/groups/1/3/2044/523556_277807925660662_156035986_n.jpg); height: 200px; width: 1100px; border: 0px solid black;">
+	<div class="page-header" style="background-image: url(http://s6.postimg.org/srj4nkl35/1280430.jpg); height: 200px; width: 1100px; border: 0px solid black;">
 	<div class="pull-right">
-		<%=link_to "Home", "/"%>
-		<%=link_to "Member Controller", "/members"%>
-		 <%=link_to "Gallery", "/gallery"%>
-		 <%=link_to "About", "/about"%>   
-		</div>
-			
+		
+	
+		<font color= #005478><%=link_to "Home", "/" , class: "btn btn-info" %>
+		<font color= #005478><%=link_to "Member Controller", "/members" , class: "btn btn-info"%></font>
+		<font color= #005478> <%=link_to "Gallery", "/gallery" , class: "btn btn-info"%></font>
+		<font color= #005478> <%=link_to "About", "/about" , class: "btn btn-info"%> </font>
+		
+		</div>	
 	<div >
 		<table >
 			<tr>
@@ -24,12 +26,12 @@
 			
 						
 			
-			<td class="text-center">
-		<h1>&nbsp &nbsp &nbsp Bangladesh Air Force Base Bashar</h1>		
-		<h2>Room No - 345/02</h2>
-	</td>
-			</tr>		
-
+		<td class="text-left">
+			
+		<font color= #FF7569><h2> &nbsp &nbsp <%= link_to "Bangladesh Air Force Base Bashar", "/" %></h2></font>
+		<font color= #FF7569><h2>&nbsp &nbsp Room No - 345/02</h2></font>
+		
+		</td>
 	</table>
 
 	</div>
