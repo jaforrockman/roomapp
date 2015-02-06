@@ -6,7 +6,7 @@ class CreateMembers < ActiveRecord::Migration
       t.string :name
       t.string :trade
       t.string :section
-
+      t.string :image
       t.timestamps null: false
     end
   end
