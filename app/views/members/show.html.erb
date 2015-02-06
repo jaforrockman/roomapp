@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Bd:</strong>
+  <%= @member.bd %>
+</p>
+
+<p>
+  <strong>Rank:</strong>
+  <%= @member.rank %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @member.name %>
+</p>
+
+<p>
+  <strong>Trade:</strong>
+  <%= @member.trade %>
+</p>
+
+<p>
+  <strong>Section:</strong>
+  <%= @member.section %>
+</p>
+
+<%= link_to 'Edit', edit_member_path(@member) %> |
+<%= link_to 'Back', members_path %>
