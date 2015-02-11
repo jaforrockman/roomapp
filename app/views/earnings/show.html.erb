@@ -6,6 +6,21 @@
 </p>
 
 <p>
+  <strong>BD:</strong>
+  <%= Earning.find(@earning.id).member.bd %>
+</p>
+<p>
+  <strong>Rank:</strong>
+  <%= Earning.find(@earning.id).member.rank %>
+</p>
+
+
+<p>
+  <strong>Name:</strong>
+  <%= Earning.find(@earning.id).member.name %>
+</p>
+
+<p>
   <strong>Amount:</strong>
   <%= @earning.amount %>
 </p>

@@ -1,9 +1,12 @@
 Rails.application.routes.draw do
+  resources :costs
+
   resources :earnings
 
   root :to => 'pages#home'
   
   get '/gallery' =>'pages#gallery'
+  get '/accounting' =>'pages#accounting'
   get '/about' =>'pages#about'
  
 

@@ -2,11 +2,13 @@
 
 <h1>Listing Earnings</h1>
 
-<table>
+<table class="table table-hover">
   <thead>
     <tr>
-      <th>Member</th>
-      <th>Amount</th>
+      <th>Member BD</th> 
+      <th> Rnak </th>
+      <th>Member Name</th> 
+      <th>Amount</th> 
       <th>Time</th>
       <th colspan="3"></th>
     </tr>
@@ -14,14 +16,20 @@
 
   <tbody>
     <% @earnings.each do |earning| %>
+    
       <tr>
-        <td><%= earning.member_id %></td>
-        <td><%= earning.amount %></td>
-        <td><%= earning.time %></td>
-        <td><%= link_to 'Show', earning %></td>
-        <td><%= link_to 'Edit', edit_earning_path(earning) %></td>
+        <td><%= Earning.find(earning.id).member.bd %></td>&nbsp &nbsp &nbsp
+        <td><%= Earning.find(earning.id).member.rank %></td>&nbsp 
+         <td><%= Earning.find(earning.id).member.name %></td>&nbsp &nbsp &nbsp
+        <td><%= earning.amount %></td>&nbsp &nbsp &nbsp 
+        <td><%= earning.time %></td>&nbsp 
+        
+
+        <td><%= link_to 'Show', earning %></td>&nbsp 
+        <td><%= link_to 'Edit', edit_earning_path(earning) %></td>&nbsp 
         <td><%= link_to 'Destroy', earning, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
+     
     <% end %>
   </tbody>
 </table>
