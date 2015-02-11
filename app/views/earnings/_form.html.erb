@@ -1,0 +1,29 @@
+<%= form_for(@earning) do |f| %>
+  <% if @earning.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@earning.errors.count, "error") %> prohibited this earning from being saved:</h2>
+
+      <ul>
+      <% @earning.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :member_id %><br>
+    <%= f.number_field :member_id %>
+  </div>
+  <div class="field">
+    <%= f.label :amount %><br>
+    <%= f.text_field :amount %>
+  </div>
+  <div class="field">
+    <%= f.label :time %><br>
+    <%= f.datetime_select :time %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

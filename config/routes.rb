@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :earnings
+
   root :to => 'pages#home'
   
   get '/gallery' =>'pages#gallery'
