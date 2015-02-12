@@ -8,7 +8,14 @@ class PagesController < ApplicationController
   def gallery
   end
 
+  def moderator
 
+  end
+
+  def memberlist
+  end
+
+ 
   def about
   end
 end

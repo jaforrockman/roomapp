@@ -7,21 +7,21 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
   <%= csrf_meta_tags %>
 </head>
+
 <body class="container">
-	<div class="page-header" style="background-image: url(http://s6.postimg.org/srj4nkl35/1280430.jpg); height: 200px; width: 1100px; border: 0px solid black;">
-	<div class="pull-right">
-		
-	
+	<div class="pull-right" >
+			
 		<font color= #005478><%=link_to "Home", "/" , class: "btn btn-info" %>
-		<font color= #005478><%=link_to "Member Controller", "/members" , class: "btn btn-info"%></font>
-		<font color= #005478><%=link_to "Earning Controller", "/earnings" , class: "btn btn-info"%></font>
-		<font color= #005478><%=link_to "Cost Controller", "/costs" , class: "btn btn-info"%></font>
+		<font color= #005478><%=link_to "Manage", "/moderator" , class: "btn btn-info"%></font>
+		
+		<font color= #005478> <%=link_to "Member List", "/memberlist" , class: "btn btn-info"%> </font>
 		<font color= #005478> <%=link_to "Accounting", "/accounting" , class: "btn btn-info"%></font>
 		<font color= #005478> <%=link_to "Gallery", "/gallery" , class: "btn btn-info"%></font>
 		<font color= #005478> <%=link_to "About", "/about" , class: "btn btn-info"%> </font>
 		
 		</div>	
-	<div >
+	<div class="page-header" style="background-image: url(http://s6.postimg.org/srj4nkl35/1280430.jpg); height: 200px; width: 1150px; border: 0px solid black;">
+		<div >
 		<table >
 			<tr>
 			<td><img width="120px" height="120px" src="http://upload.wikimedia.org/wikipedia/en/thumb/a/a7/Bangladesh_Air_Force_emblem.svg/851px-Bangladesh_Air_Force_emblem.svg.png"/>
@@ -31,8 +31,9 @@
 			
 		<td class="text-left">
 			
-		<font color= #FF7569><h2> &nbsp &nbsp <%= link_to "Bangladesh Air Force Base Bashar", "/" %></h2></font>
-		<font color= #FF7569><h2>&nbsp &nbsp Room No - 345/02</h2></font>
+		<font color= #FFFFFF><h2> &nbsp &nbsp <%= link_to "Bangladesh Air Force ", "/" %></h2></font>
+		<font color= #FFFFFF><h2>&nbsp &nbsp Base Bashar</h2></font>
+		<font color= #FFFFFF><h2>&nbsp &nbsp Room No - 345/02</h2></font>
 		
 		</td>
 	</table>
@@ -43,6 +44,10 @@
 
 	</div>
 <%= yield %>
+
+<div>
+	<h3>This Application is developed by LAC Md Abu Zafor Admin Asst Entry no 37</h3>
+</div>
 
 </body>
 </html>

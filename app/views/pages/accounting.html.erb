@@ -1,7 +1,10 @@
-<h1>This page is designed for accounting </h1>
-<h1>Room Cost And Earning Reports</h1>
+    <h1>Room Cost And Earning Reports</h1>
+  
+    
+  
 <hr style='background-color:#3399FF;border-width:0;color:#3399FF;height:2px;line-height:5;text-align:left;width:94%;'/>
-
+<div align="center"><h1>Available Balance Tk.: &nbsp &nbsp<%= earning_total- cost_total%></h1>
+</div>
 
 <div class="container-fluid"> 
 	<div class="row">
@@ -11,10 +14,18 @@
    		<hr style='background-color:#3399FF;border-width:0;color:#3399FF;height:2px;line-height:5;text-align:left;width:99%;'/>
 
    		<p>
-      <% @earnings = Earning.all %>
+      <% @earnings = Earning.all.order('created_at DESC') %>
 
           <table class="table table-hover">
             <thead>
+              <tr>
+                <td colspan="2"><h3>Total Earnings</h3></td>
+                
+                
+                <td></td>
+                <td colspan="2"><h3 align="right">Tk. <%= earning_total %></h3></td>
+
+              </tr>
               <tr>
                 <th>Paid on</th> 
                 <th>Member BD</th> 
@@ -38,6 +49,7 @@
                   
                 </tr>
               <% end %>
+              
             </tbody>
           </table>
 
@@ -53,9 +65,16 @@
 
     	<p>
          
-        <% @costs = Cost.all %>
+        <% @costs = Cost.all.order('created_at DESC') %>
           <table class="table table-hover">
             <thead>
+              <tr>
+                <td colspan="2"><h3>Total Cost</h3></td>
+                
+                <td colspan="2"><h3>Tk.<%= cost_total %></h3></td>
+                <td></td>
+
+              </tr>
               <tr>
                 <th>Date</th>
                 <th>Occasion</th>
@@ -76,13 +95,7 @@
                 </tr>
 
               <% end %>
-              <tr>
-                <td>Total Cost</td>
-                <td></td>
-                <td><%= cost_total %></td>
-                <td></td>
-
-              </tr>
+              
             </tbody>
 
           </table>

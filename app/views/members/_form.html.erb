@@ -36,6 +36,12 @@
     <%= f.label :section %><br>
     <%= f.text_field :section %>
   </div>
+
+<div class="field">
+    <%= f.label :kind %><br>
+    <%= f.select :kind, ["active", "inactive"] %>
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>

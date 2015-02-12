@@ -4,7 +4,7 @@ class EarningsController < ApplicationController
   # GET /earnings
   # GET /earnings.json
   def index
-    @earnings = Earning.all
+    @earnings = Earning.all.order('created_at DESC')
   end
 
   # GET /earnings/1

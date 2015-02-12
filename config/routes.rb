@@ -7,7 +7,10 @@ Rails.application.routes.draw do
   
   get '/gallery' =>'pages#gallery'
   get '/accounting' =>'pages#accounting'
+  get '/moderator' =>'pages#moderator'
   get '/about' =>'pages#about'
+  get '/memberlist' =>'pages#memberlist'
+  
  
 
   resources :members

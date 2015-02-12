@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<% @members=Member.all %>
+<p>
+  
+<%= image_tag @member.image, style: "width:10%" %>
+
+</p>
+<p>
+  <strong>Bd:</strong>
+  <%= @member.bd %>
+</p>
+
+<p>
+  <strong>Rank:</strong>
+  <%= @member.rank %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @member.name %>
+</p>
+
+<p>
+  <strong>Trade:</strong>
+  <%= @member.trade %>
+</p>
+
+<p>
+  <strong>Section:</strong>
+  <%= @member.section %>
+</p>
+
+
+<%= link_to 'Back', memberlist_path %>

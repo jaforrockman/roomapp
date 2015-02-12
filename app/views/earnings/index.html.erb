@@ -5,6 +5,7 @@
 <table class="table table-hover">
   <thead>
     <tr>
+      <th>Date</th>
       <th>Member BD</th> 
       <th> Rnak </th>
       <th>Member Name</th> 
@@ -18,9 +19,10 @@
     <% @earnings.each do |earning| %>
     
       <tr>
-        <td><%= Earning.find(earning.id).member.bd %></td>&nbsp &nbsp &nbsp
-        <td><%= Earning.find(earning.id).member.rank %></td>&nbsp 
-         <td><%= Earning.find(earning.id).member.name %></td>&nbsp &nbsp &nbsp
+         <td><%= earning.created_at.strftime("%d/%m/%Y")  %></td>
+        <td><%= Earning.find(earning.id).member.bd %></td>
+        <td><%= Earning.find(earning.id).member.rank %></td>
+         <td><%= Earning.find(earning.id).member.name %></td>
         <td><%= earning.amount %></td>&nbsp &nbsp &nbsp 
         <td><%= earning.time %></td>&nbsp 
         
@@ -36,4 +38,6 @@
 
 <br>
 
-<%= link_to 'New Earning', new_earning_path %>
+<%= link_to 'New Earning', new_earning_path , class: "btn btn-primary"%>
+<%= link_to 'Back To Managing Page', moderator_path, class: "btn btn-primary" %>
+

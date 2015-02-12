@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= f.label :member %><br>
-    <%= collection_select(:earning, :member_id, Member.all, :id, :bd, {}, {:multiple => false}) %>
+    <%= collection_select(:earning, :member_id, Member.active_members, :id, :bd, {}, {:multiple => false}) %>
   </div>
   <div class="field">
     <%= f.label :amount %><br>
