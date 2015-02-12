@@ -5,7 +5,7 @@
 <table>
   <thead>
     <tr>
-      <th>Occasion</th>
+      <th>Reason</th>
       <th>Amount</th>
       <th>description</th>
       <th colspan="3"></th>
@@ -17,15 +17,19 @@
       <tr>
         <td><%= cost.occasion %></td>
         <td><%= cost.amount %></td>
-        <td><%= cost.description %></td>
+        <td><%= truncate(cost.description, length: 50) %></td>
         <td><%= link_to 'Show', cost %></td>
         <td><%= link_to 'Edit', edit_cost_path(cost) %></td>
         <td><%= link_to 'Destroy', cost, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
+
+    
     <% end %>
   </tbody>
 </table>
 
+
 <br>
+
 
 <%= link_to 'New Cost', new_cost_path %>

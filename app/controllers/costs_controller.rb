@@ -4,7 +4,7 @@ class CostsController < ApplicationController
   # GET /costs
   # GET /costs.json
   def index
-    @costs = Cost.all
+    @costs=Cost.all
   end
 
   # GET /costs/1
@@ -60,6 +60,7 @@ class CostsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
 
   private
     # Use callbacks to share common setup or constraints between actions.
