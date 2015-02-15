@@ -1,2 +1,10 @@
-<h1>Pages#gallery</h1>
-<p>Find me in app/views/pages/gallery.html.erb</p>
+<h1>Image gallery Of Room No-345/02</h1>
+
+
+<% @images.each do |image| %>
+ 
+  <%= render "images/image", image: image %>
+
+  <br><br><br>
+
+ <% end %>

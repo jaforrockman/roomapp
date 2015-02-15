@@ -6,6 +6,7 @@ class PagesController < ApplicationController
   	end
 
   def gallery
+    @images = Image.all
   end
 
   def moderator
