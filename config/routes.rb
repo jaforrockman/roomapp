@@ -1,17 +1,23 @@
 Rails.application.routes.draw do
+  devise_for :users
   resources :images
 
   resources :costs
 
   resources :earnings
 
+  
+
   root :to => 'pages#home'
+
   
   get '/gallery' =>'pages#gallery'
   get '/accounting' =>'pages#accounting'
   get '/moderator' =>'pages#moderator'
   get '/about' =>'pages#about'
   get '/memberlist' =>'pages#memberlist'
+  get '/beforemanage' => 'beforemanage#index'
+
   
  
 

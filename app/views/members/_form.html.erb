@@ -41,6 +41,14 @@
     <%= f.label :kind %><br>
     <%= f.select :kind, ["active", "inactive"] %>
   </div>
+<div class="field">
+    <%= f.label :district %><br>
+    <%= f.text_field :district %>
+  </div>
+<div class="field">
+    <%= f.label :entry %><br>
+    <%= f.number_field :entry %>
+  </div>
 
   <div class="actions">
     <%= f.submit %>

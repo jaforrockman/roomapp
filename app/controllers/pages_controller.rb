@@ -14,7 +14,7 @@ class PagesController < ApplicationController
   end
 
   def memberlist
-    
+
   end
 
  
