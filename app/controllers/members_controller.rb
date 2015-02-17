@@ -1,6 +1,6 @@
 class MembersController < ApplicationController
 
-  before_filter :authenticate_user!
+  before_filter :authenticate_user!, except: :show
   before_action :set_member, only: [:show, :edit, :update, :destroy]
 
   # GET /members
