@@ -3,7 +3,7 @@ class PagesController < ApplicationController
   end
 
 	def accounting
-  	end
+  end
 
   def gallery
     @images = Image.all
